@@ -30,13 +30,33 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+.forEach applies a specified function or code to each item in an array, and modifies the array based on these parameters. .map returns a new array based on the specified manipulations in the function, and does NOT mutate the original array.  
+
+
 2. What is the difference between a function and a method?
+
+A function, at a broad level, has global scope and can be applied to any piece of data in the doc, assuming it was written with global scope. A method is a function with limited scope to the object or array it is applied to. It cannot be called onto anything in the doc once it is applied to a specific item.   
+
 
 3. What is closure?
 
+Closure applies to the idea of callbacks, where a function has the ability to have a function return a function as a result of a function. (Say that five times fast..)
+
+
 4. Describe the four rules of the 'this' keyword.
 
+1. global binding - where this keyword references the global window of the doc
+
+2. implicit binding - when this references the object it is contained within
+
+3. new binding - when this references a object created by a constructor in a constructor
+
+4. explicit binding - when this references the object it is bound to in the inline statement 
+
+
 5. Why do we need super() in an extended class?
+
+The super() method extends the parameters of the parent class to the child class that is being created. This ensures the child object resembles the structure and parameters of the parents class. 
 
 ## Project Set up
 
