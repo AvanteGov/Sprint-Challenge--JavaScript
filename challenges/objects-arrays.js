@@ -79,8 +79,18 @@ Once you have the new array created, sort the universities alphabetically and lo
 
 
 const universities = graduates.map(function (arrItem){
-  return arrItem.university;
+  return arrItem.university
 });
+
+universities.sort((x,y) => {
+  if (x > y) {
+    return 1;
+  } else if (x === y) { 
+    return 0;
+  } else {
+    return -1;
+  }
+})
 
 console.log(universities);
 
@@ -131,10 +141,13 @@ displayNames will be an array of strings, and each string should follow this pat
 
 */
 
-
-const displayNames = zooAnimals.map(function(arrItem){
+const displayNames = zooAnimals.forEach(function(arrItem){
   return `Name: ${arrItem.animal_name} Scientific: ${arrItem.scientific_name}.`
-});
+})
+
+// const displayNames = zooAnimals.map(function(arrItem){
+//   return `Name: ${arrItem.animal_name} Scientific: ${arrItem.scientific_name}.`
+// });
 
 console.log(displayNames);
 
@@ -148,6 +161,9 @@ each string following this pattern: "jackal, asiatic". Log the resut.
 const lowCaseAnimalNames = zooAnimals.map(function(arrItem){
   return arrItem.animal_name.toLowerCase()
 });
+
+
+
 
 console.log(lowCaseAnimalNames);
 
@@ -185,52 +201,52 @@ Stretch: If you haven't already, convert your array method callbacks into arrow 
 
 */
 
-const universities = graduates.map((arrItem) => {
-  return arrItem.university;
-});
+// const universities = graduates.map((arrItem) => {
+//   return arrItem.university;
+// });
 
-console.log(universities);
-
-
-const contactInfo = graduates.map((arrItem) =>  {
-  return `${arrItem.first_name} ${arrItem.email}` 
-})
+// console.log(universities);
 
 
-console.log(contactInfo);
-
-const unisWithUni = universities.filter((arrItem) => {
-  return arrItem.includes('Uni')
-});
+// const contactInfo = graduates.map((arrItem) =>  {
+//   return `${arrItem.first_name} ${arrItem.email}` 
+// })
 
 
-console.log(unisWithUni);
+// console.log(contactInfo);
+
+// const unisWithUni = universities.filter((arrItem) => {
+//   return arrItem.includes('Uni')
+// });
 
 
-const displayNames = zooAnimals.map((arrItem) => {
-  return `Name: ${arrItem.animal_name} Scientific: ${arrItem.scientific_name}.`
-});
-
-console.log(displayNames);
-
-const lowCaseAnimalNames = zooAnimals.map((arrItem) => {
-  return arrItem.animal_name.toLowerCase()
-});
-
-console.log(lowCaseAnimalNames);
-
-const lowPopulationAnimals = zooAnimals.filter((arrItem) => {
-  return arrItem.population < 5
-});
-console.log(lowPopulationAnimals);
+// console.log(unisWithUni);
 
 
-const animalPop = zooAnimals.map((arrItem) => {
-  return arrItem.population;
-})
+// const displayNames = zooAnimals.map((arrItem) => {
+//   return `Name: ${arrItem.animal_name} Scientific: ${arrItem.scientific_name}.`
+// });
 
-const populationTotal = animalPop.reduce((accum, item) => {
-  return accum + item
-},0)
+// console.log(displayNames);
 
-console.log(populationTotal);
+// const lowCaseAnimalNames = zooAnimals.map((arrItem) => {
+//   return arrItem.animal_name.toLowerCase()
+// });
+
+// console.log(lowCaseAnimalNames);
+
+// const lowPopulationAnimals = zooAnimals.filter((arrItem) => {
+//   return arrItem.population < 5
+// });
+// console.log(lowPopulationAnimals);
+
+
+// const animalPop = zooAnimals.map((arrItem) => {
+//   return arrItem.population;
+// })
+
+// const populationTotal = animalPop.reduce((accum, item) => {
+//   return accum + item
+// },0)
+
+// console.log(populationTotal);
