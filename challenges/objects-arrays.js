@@ -185,3 +185,52 @@ Stretch: If you haven't already, convert your array method callbacks into arrow 
 
 */
 
+const universities = graduates.map((arrItem) => {
+  return arrItem.university;
+});
+
+console.log(universities);
+
+
+const contactInfo = graduates.map((arrItem) =>  {
+  return `${arrItem.first_name} ${arrItem.email}` 
+})
+
+
+console.log(contactInfo);
+
+const unisWithUni = universities.filter((arrItem) => {
+  return arrItem.includes('Uni')
+});
+
+
+console.log(unisWithUni);
+
+
+const displayNames = zooAnimals.map((arrItem) => {
+  return `Name: ${arrItem.animal_name} Scientific: ${arrItem.scientific_name}.`
+});
+
+console.log(displayNames);
+
+const lowCaseAnimalNames = zooAnimals.map((arrItem) => {
+  return arrItem.animal_name.toLowerCase()
+});
+
+console.log(lowCaseAnimalNames);
+
+const lowPopulationAnimals = zooAnimals.filter((arrItem) => {
+  return arrItem.population < 5
+});
+console.log(lowPopulationAnimals);
+
+
+const animalPop = zooAnimals.map((arrItem) => {
+  return arrItem.population;
+})
+
+const populationTotal = animalPop.reduce((accum, item) => {
+  return accum + item
+},0)
+
+console.log(populationTotal);
