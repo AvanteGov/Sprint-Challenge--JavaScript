@@ -94,6 +94,9 @@ universities.sort((x,y) => {
 
 console.log(universities);
 
+
+// could have added the .sort method on the consol.log of universities.
+
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
 
 The resulting contact information strings should have a space between the first name and the email, like this: 
@@ -112,7 +115,7 @@ console.log(contactInfo);
 const unisWithUni = universities.filter(function (arrItem){
   return arrItem.includes('Uni')
 });
-
+// could have created a constant and psuhed the new information into a variable. 
 
 console.log(unisWithUni);
 
